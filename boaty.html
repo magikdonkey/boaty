@@ -1,0 +1,69 @@
+<html>
+<header>
+    <meta charset="UTF-8">
+
+    <style>
+        #canvas {
+            border: 1px black solid;
+            cursor: none;
+            background-color: lightblue;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        body{
+            background-color: black;
+        }
+
+        a {
+            color: #000;
+        }
+    </style>
+
+    <script type="text/javascript" src="perlin.js"></script>
+    <script type="text/javascript" src="anim.js"></script>
+    <script type="text/javascript" src="explode.js"></script>
+    <script type="text/javascript" src="item_pool.js"></script>
+    <script type="text/javascript" src="boaty.js"></script>
+</header>
+<body>
+
+<canvas class="center" tabindex="1" id="canvas" width="900" height="860" autofocus></canvas>
+
+<div>
+    <a href="javascript:void(0)" onclick="reset()">Reset</a>
+    <a href="javascript:void(0)" onclick="stop()">Stop</a>
+    <a href="javascript:void(0)" onclick="start()">Start</a>
+</div>
+<script>
+
+Boaty.init(document.getElementById("canvas"));
+
+window.onload = function()
+{
+    document.getElementById("canvas").focus();
+    start();
+}
+
+function start()
+{
+    Boaty.start();
+}
+
+function stop()
+{
+    Boaty.stop();
+}
+
+function reset()
+{
+    Boaty.reset();
+}
+
+</script>
+</body>
+</html>
