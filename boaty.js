@@ -275,13 +275,13 @@ var Boaty = (function() {
         {
             if (keyStatus["d"])
             {
-                player.angle += 0.1;
-                player.spin += 0.1;
+                player.angle += (0.2 * rel);
+                player.spin += (0.2 * rel);
             }
             if (keyStatus["a"])
             {
-                player.angle -= 0.1;
-                player.spin += 0.1;
+                player.angle -= (0.2 * rel);
+                player.spin += (0.2 * rel);
             }
 
             if (player.angle > Math.PI)
